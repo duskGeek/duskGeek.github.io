@@ -6,21 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | yeqian data  博客</title>
+  <title>Spark | yeqian data  博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="spark webspark官网 spark demo codeFirst, we import the names of the Spark Streaming classes and some implicit conversions from StreamingContext into our environment in order to add useful methods to oth">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/01/05/hello-world/index.html">
+<meta property="og:title" content="Spark">
+<meta property="og:url" content="http://yoursite.com/2017/05/13/spark/index.html">
 <meta property="og:site_name" content="yeqian data  博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="spark webspark官网 spark demo codeFirst, we import the names of the Spark Streaming classes and some implicit conversions from StreamingContext into our environment in order to add useful methods to oth">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-05T04:57:35.223Z">
-<meta property="article:modified_time" content="2020-01-05T04:57:35.223Z">
+<meta property="og:image" content="http://yoursite.com/img/blog_img/streaming-dstream-ops.png">
+<meta property="article:published_time" content="2017-05-13T11:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-05T10:54:15.304Z">
 <meta property="article:author" content="yq">
+<meta property="article:tag" content="spark">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/img/blog_img/streaming-dstream-ops.png">
   
     <link rel="alternative" href="/atom.xml" title="yeqian data  博客" type="application/atom+xml">
   
@@ -178,14 +181,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-spark" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Spark
     </h1>
   
 
@@ -197,8 +200,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/01/05/hello-world/" class="archive-article-date">
-        <time datetime="2020-01-05T04:57:35.223Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-05</time>
+<a href="/2017/05/13/spark/" class="archive-article-date">
+        <time datetime="2017-05-13T11:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
 </a>
 
   
@@ -211,7 +214,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">73字</span>
+      <span class="post-count">134字</span>
     </span>
   </span>
 
@@ -231,19 +234,16 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <h3 id="spark-web"><a href="#spark-web" class="headerlink" title="spark web"></a>spark web</h3><p><a href="http://spark.apache.org/docs/" target="_blank" rel="noopener">spark官网</a></p>
+<h3 id="spark-demo-code"><a href="#spark-demo-code" class="headerlink" title="spark demo code"></a>spark demo code</h3><p>First, we import the names of the Spark Streaming classes and some implicit conversions from StreamingContext into our environment in order to add useful methods to other classes we need (like DStream). StreamingContext is the main entry point for all streaming functionality. We create a local StreamingContext with two execution threads, and a batch interval of 1 second.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.spark._</span><br><span class="line"><span class="keyword">import</span> org.apache.spark.streaming._</span><br><span class="line"><span class="keyword">import</span> org.apache.spark.streaming.<span class="type">StreamingContext</span>._ <span class="comment">// not necessary since Spark 1.3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Create a local StreamingContext with two working thread and batch interval of 1 second.</span></span><br><span class="line"><span class="comment">// The master requires 2 cores to prevent a starvation scenario.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setMaster(<span class="string">"local[2]"</span>).setAppName(<span class="string">"NetworkWordCount"</span>)</span><br><span class="line"><span class="keyword">val</span> ssc = <span class="keyword">new</span> <span class="type">StreamingContext</span>(conf, <span class="type">Seconds</span>(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h4 id="Spark-img"><a href="#Spark-img" class="headerlink" title="Spark img"></a>Spark img</h4><p><img src="/img/blog_img/streaming-dstream-ops.png" alt="avatar"></p>
+<ul>
+<li>spark-core</li>
+<li>spark streaming</li>
+<li>spark sql</li>
+</ul>
 
     
 
@@ -280,7 +280,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2020/01/05/hello-world/" title="Hello World" target="_blank">http://yoursite.com/2020/01/05/hello-world/</a>
+          <a href="http://yoursite.com/2017/05/13/spark/" title="Spark" target="_blank">http://yoursite.com/2017/05/13/spark/</a>
         </li>
         
         <li>
@@ -297,6 +297,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">spark</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -347,7 +358,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/05/hello-world/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/05/13/spark/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -514,6 +525,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">spark</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
